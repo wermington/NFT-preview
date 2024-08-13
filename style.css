@@ -28,10 +28,9 @@ p {
 }
 
 hr {
-    border: none; /* Remove o estilo padrão */
-    border-top: 2px solid var(--cor-font1); /* Ajuste a espessura e a cor da linha */
+  border: none; /* Remove o estilo padrão */
+  border-top: 2px solid var(--cor-font1); /* Ajuste a espessura e a cor da linha */
 }
-
 
 .container {
   display: flex;
@@ -44,9 +43,40 @@ hr {
   max-width: 35rem;
   background-color: hsl(216, 50%, 16%);
 
-  & img {
-    max-width: 100%;
-    border-radius: 1rem;
+  & div {
+    position: relative;
+    background-color: hsl(216, 50%, 16%);
+
+    & .ativo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 31rem;
+      background-color: transparent;
+
+      & .olho {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+      }
+
+      &:hover {
+        background-color: #00ffea75;
+        border-radius: 1rem;
+        transition: background-color 1s ease;
+
+        & .olho {
+          display: block;
+        }
+      }
+    }
+    & img {
+      max-width: 100%;
+      border-radius: 1rem;
+    }
   }
 
   & .titulo {
@@ -78,16 +108,16 @@ hr {
   }
 
   & .perfil {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 
-      & img{
-        max-width: 4rem;
-      }
-
-      & spam{
-        color: white;
-      }
+    & img {
+      max-width: 4rem;
     }
+
+    & spam {
+      color: white;
+    }
+  }
 }
