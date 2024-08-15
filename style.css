@@ -64,7 +64,7 @@ hr {
       }
 
       &:hover {
-        background-color: #00ffea75;
+        background-color: #00fff794;
         border-radius: 1rem;
         transition: background-color 1s ease;
 
@@ -82,6 +82,11 @@ hr {
   & .titulo {
     color: white;
     font-weight: 600;
+    &:hover {
+      cursor: pointer;
+      color: #00fff8;
+      transition: 0.5s;
+    }
   }
 
   & p {
@@ -118,6 +123,11 @@ hr {
 
     & spam {
       color: white;
+      &:hover {
+        cursor: pointer;
+        color: #00ffea;
+        transition: 0.5s;
+      }
     }
   }
 }
